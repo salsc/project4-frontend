@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom"
 
 export default class Show extends Component {
     render() {
@@ -10,7 +11,8 @@ export default class Show extends Component {
 
         return (
             <div>
-                <h3>{recipeDetail.recName}</h3>
+                <Link to={`/detail/${recipeDetail.id}/edit`}>Edit Recipe</Link>
+                <h2>{recipeDetail.recName}</h2>
                 <h4>{recipeDetail.recNameMore}</h4>
                 <h5>Ingredients</h5>
                 <ul>

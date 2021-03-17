@@ -5,6 +5,7 @@ import './App.css';
 import Home from '../Home/Home';
 import Show from '../Show/Show';
 import Create from'../Create/Create';
+import Edit  from '../Edit/Edit';
 
 const url = 'http://localhost:3000/api/recipes'
 
@@ -62,10 +63,10 @@ class App extends Component {
     this.props.history.push("/")
   };
 
-  editRecipe = (e) => {
+  editRecipe = (e,id) => {
     e.preventDefault();
     axios
-      .post(url, {
+      .put(`${url}/detail/${id}`, {
         recName: e.target.recName.value,
         recNameMore: e.target.recNameMore.value,
         strIngredient1: e.target.strIngredient1.value,
@@ -91,6 +92,16 @@ class App extends Component {
     this.props.history.push("/")
   };
 
+  deleteRecipe = (id) => {
+    axios
+      .delete(`${url}/detail/${id}`)
+      .then((response) => {
+        console.log('delete',response);
+        this.getRecipes()
+      });
+    this.props.history.push("/")
+  };
+
   render() {
     console.log('state',this.state.recipes)
     return (
@@ -108,16 +119,28 @@ class App extends Component {
               component={() => (<Home recipes={this.state.recipes} />)}
             />
             <Route
-              exact
               path="/new"
               component={() => (<Create addRecipe={this.addRecipe} />)}
             />
             <Route
+              exact
               path="/detail/:id"
               component={(routerProps) => (
                 <Show
                   {...routerProps}
                   recipes={this.state.recipes}
+                />
+              )}
+            />
+            <Route
+              exact
+              path="/detail/:id/edit"
+              component={(routerProps) => (
+                <Edit
+                  {...routerProps}
+                  recipes={this.state.recipes}
+                  editRecipe={this.editRecipe}
+                  deleteRecipe={this.deleteRecipe}
                 />
               )}
             />

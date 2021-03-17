@@ -5,6 +5,7 @@ export default class Create extends Component {
   render() {
     return (
       <div>
+          <h1>Create New Recipe</h1>
             <form onSubmit={this.props.addRecipe}>
                 <div className="formLine">
                     <input type="text" name="recName" placeholder="Recipe Name" />
