@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 export default class Home extends Component {
   render() {
+    console.log('home recipes',this.props.recipes)
     const allRecipes = this.props.recipes.map((recipe) => {
       return (
         <li key={recipe.id}>
