@@ -47,11 +47,11 @@ Able to do full CRUD on recipes.
 
 ## Components
 
-App component - main app
-Home component - show list of recipes in DB
-Show component - show specific recipe details
-Create component - create new recipe
-Edit component - edit existing recipe, displaying stored values as defaults
+* App component - main app
+* Home component - show list of recipes in DB
+* Show component - show specific recipe details
+* Create component - create new recipe
+* Edit component - edit existing recipe, displaying stored values as defaults
 
 ## Additional Libraries
  <!-- Use this section to list all supporting libraries and thier role in the project such as Axios, ReactStrap, D3, etc. -->
