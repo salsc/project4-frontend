@@ -15,12 +15,10 @@ Back End
 
 ## Wireframes
 
-Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe.
+List of stored recipes, open each recipe to show component or create new recipe, existing recipes can be deleted or edited.
 
 - [wireframes](https://github.com/salsc/project4-frontend/blob/main/planning/Project%204%20Wireframe.pdf)
 <!-- - [react architecture]() -->
-
-List of stored recipes, open each recipe to show component or create new recipe, existing recipes can be deleted or edited.
 
 ### MVP/PostMVP - 5min
 
