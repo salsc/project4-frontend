@@ -6,12 +6,12 @@ Create a Node/Express backend and a React frontend that communicate with each ot
 
 ## Project Links
 Front End
-- [github repo](https://github.com/salsc/project4-frontend)
-- [deployment](https://sei-project4-front-end.herokuapp.com/)
+- Github Repo [https://github.com/salsc/project4-frontend](https://github.com/salsc/project4-frontend)
+- Heroku Deployment [https://sei-project4-front-end.herokuapp.com/](https://sei-project4-front-end.herokuapp.com/)
 
 Back End
-- [github repo](https://github.com/salsc/deere-project4-express-api-starter)
-- [deployment](https://sei-project4-back-end.herokuapp.com/)
+- Github Repo [https://github.com/salsc/deere-project4-express-api-starter](https://github.com/salsc/deere-project4-express-api-starter)
+- Heroku Deployment [https://sei-project4-back-end.herokuapp.com/](https://sei-project4-back-end.herokuapp.com/)
 
 ## Wireframes
 
