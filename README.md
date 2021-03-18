@@ -9,6 +9,7 @@ Create a Node/Express backend and a React frontend that communicate with each ot
 Front End
 - [github repo](https://github.com/salsc/project4-frontend)
 - [deployment](https://sei-project4-front-end.herokuapp.com/)
+
 Back End
 - [github repo](https://github.com/salsc/deere-project4-express-api-starter)
 - [deployment](https://sei-project4-back-end.herokuapp.com/)
@@ -17,8 +18,8 @@ Back End
 
 Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe.
 
-- [wireframes](https://github.com/salsc/project4-frontend/blob/main/planning/Project%204%20Wireframe.pptx)
-- [react architecture]()
+- [wireframes](https://github.com/salsc/project4-frontend/blob/main/planning/Project%204%20Wireframe.pdf)
+<!-- - [react architecture]() -->
 
 List of stored recipes, open each recipe to show component or create new recipe, existing recipes can be deleted or edited.
 
@@ -36,23 +37,21 @@ Able to do full CRUD on recipes.
 - Render data on page 
 - Allow user to interact with the page
 
-##### Snapshot of Home page
-
-![alt text](https://github.com/salsc/project4-frontend/blob/main/planning/App%20Screenshot.pngg "App Homepage Snapshot")
-
 #### PostMVP EXAMPLE
 
 - Allow user specific recipe lists
 
+##### Snapshot of Home page
+
+![alt text](https://github.com/salsc/project4-frontend/blob/main/planning/App%20Screenshot.png "App Homepage Snapshot")
+
 ## Components
-##### Writing out your components and its descriptions isn't a required part of the proposal but can be helpful.
 
 App component - main app
 Home component - show list of recipes in DB
 Show component - show specific recipe details
 Create component - create new recipe
 Edit component - edit existing recipe, displaying stored values as defaults
-
 
 ## Additional Libraries
  <!-- Use this section to list all supporting libraries and thier role in the project such as Axios, ReactStrap, D3, etc. -->
