@@ -3,58 +3,56 @@
 
 ## Project Description
 
-Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality.
+Create a Node/Express backend and a React frontend that communicate with each other.
 
 ## Project Links
-
-- [github repo]()
-- [deployment]()
+Front End
+- [github repo](https://github.com/salsc/project4-frontend)
+- [deployment](https://sei-project4-front-end.herokuapp.com/)
+Back End
+- [github repo](https://github.com/salsc/deere-project4-express-api-starter)
+- [deployment](https://sei-project4-back-end.herokuapp.com/)
 
 ## Wireframes
 
 Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe.
 
-- [wireframes]()
+- [wireframes](https://github.com/salsc/project4-frontend/blob/main/planning/Project%204%20Wireframe.pptx)
 - [react architecture]()
-Dual lists. Catalog on the left, select to add to selected items list on the right.
 
-
-
-Define the the React components and the architectural design of your app.
+List of stored recipes, open each recipe to show component or create new recipe, existing recipes can be deleted or edited.
 
 ### MVP/PostMVP - 5min
 
-The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
+##### MVP
+Able to do full CRUD on recipes.
+##### PostMVP
+1. Add additional db tables for ingredients and directions so they can be fully dynamic and mapped in the app.
+2. Add bootstrap elements for styling. Potentially use cards for each recipe.
+3. User specific recipes: user DB/CRUD, join users + recipes
 
 #### MVP EXAMPLE
-- Establish database tables 
+- Establish database table 
 - Render data on page 
 - Allow user to interact with the page
 
+##### Snapshot of Home page
+
+![alt text](https://github.com/salsc/project4-frontend/blob/main/planning/App%20Screenshot.pngg "App Homepage Snapshot")
+
 #### PostMVP EXAMPLE
 
-- Add user specific selection lists or 'shopping cart'
+- Allow user specific recipe lists
 
 ## Components
 ##### Writing out your components and its descriptions isn't a required part of the proposal but can be helpful.
 
-Based on the initial logic defined in the previous sections try and breakdown the logic further into stateless/stateful components. 
+App component - main app
+Home component - show list of recipes in DB
+Show component - show specific recipe details
+Create component - create new recipe
+Edit component - edit existing recipe, displaying stored values as defaults
 
-| Component | Description | 
-| --- | :---: |  
-| App | This will interface with postgreSQL database for dual lists| 
-| Header | This will render the header include the nav | 
-| Footer | This will render the header include the nav | 
-
-<!-- ## Time Frames
-
-Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Also, put a gif at the top of your Readme before you pitch, and you'll get a panda prize.
-
-| Component | Priority | Estimated Time | Time Invetsted | Actual Time |
-| --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 6hrs| 5hrs | 5hrs | -->
 
 ## Additional Libraries
  <!-- Use this section to list all supporting libraries and thier role in the project such as Axios, ReactStrap, D3, etc. -->
@@ -62,22 +60,32 @@ Time frames are also key in the development cycle.  You have limited time to cod
  * [Heroku] - Deployment
  * [Express, Node.JS] - Separation of functions, controllers
  * [Sequelize, PostgreSQL] - Persistent database and interaction
+ * [ReactJS] - Front end UI/UX
 
 ## Code Snippet
-
-<!-- Use this section to include a brief code snippet of functionality that you are proud of an a brief description.  Code snippet should not be greater than 10 lines of code.  -->
-
 ```
-
+<ol className="directList">
+    {recipeDetail.txtDirections1 && <li>{recipeDetail.txtDirections1}</li>}
+    {recipeDetail.txtDirections2 && <li>{recipeDetail.txtDirections2}</li>}
+    {recipeDetail.txtDirections3 && <li>{recipeDetail.txtDirections3}</li>}
+    {recipeDetail.txtDirections4 && <li>{recipeDetail.txtDirections4}</li>}
+</ol>
 ```
+This section of code conditionally renders JSX elements based on whether or not there is a value stored for it in the DB. This was necessary because I did not have separate tables for ingredients and directions in the DB that I could map thru and conditionally rendor in that way.
 
 
 ## Issues and Resolutions
- Use this section to list of all major issues encountered and their resolution.
+Passing routerProps was a big deal.
+Connecting back end and front end apps on Heroku was challenging.
 
 #### SAMPLE.....
-**ERROR**: app.js:34 Uncaught SyntaxError: Unexpected identifier                                
-**RESOLUTION**: Missing comma after first object in sources {} object
+**ERROR**:                          
+**RESOLUTION**: 
 
 ## User Stories
-1. 
+1. User should be able to view the list of stored recipes in the DB.
+2. User should be able to create a new recipe and store it in the DB.
+3. User should be able to select a recipe and view the details of that recipe.
+4. User should be able to edit an existing recipe without retyping all the information from scratch.
+5. User should be able to display an image to represent the finished product of the recipe.
+6. User should be able to delete a recipe. This function should be nested in the edit page to prevent accidental use.
