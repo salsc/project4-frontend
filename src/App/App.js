@@ -107,7 +107,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <Link to='/'>
+          <Link className="App-link" to='/'>
             <p id="title">Recipe App</p>
           </Link>
         </div>
