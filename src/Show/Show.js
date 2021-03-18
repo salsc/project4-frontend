@@ -8,7 +8,7 @@ export default class Show extends Component {
             return recipe.id == this.props.match.params.id;
 
         });
-        console.log('recipedetail', recipeDetail)
+        // console.log('recipedetail', recipeDetail)
 
         return (
             <div>
