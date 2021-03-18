@@ -7,7 +7,7 @@ import Show from '../Show/Show';
 import Create from'../Create/Create';
 import Edit  from '../Edit/Edit';
 
-const url = 'http://localhost:3000/api/recipes'
+const url = process.env.REACT_APP_BACKEND_URL || 'http://localhost:3000/api/recipes'
 
 class App extends Component {
   constructor(){
